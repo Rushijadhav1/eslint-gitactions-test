@@ -15,7 +15,11 @@ jobs:
         uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-      - run: cd client && bun install
+        run: |
+          cd client
+          bun install
 
-      - name: Run ESLint  
-      - run: cd client && bun run lint
+      - name: Run ESLint
+        run: |
+          cd client
+          bun run lint
